@@ -1,0 +1,200 @@
+
+
+body {
+	min-height: 100vh;
+	display: grid;
+	
+	background: radial-gradient(circle at 70% 35%, yellow, #ff7e00 35%);
+}
+.image {
+	width: 40em;
+	margin: auto;
+}
+
+circle {
+	stroke: #fff;
+	stroke-width: 5;
+	fill: transparent;
+	stroke-linecap: round;
+	stroke-dasharray: 1;
+	stroke-dashoffset: 1;
+	animation: dash 2s ease-in-out forwards;
+	animation-delay: calc(var(--i) * 0.35s);
+}
+@keyframes dash {
+	0% {
+		stroke-dashoffset: 1;
+		fill: transparent;
+	}
+	50%,
+	80% {
+		stroke-dashoffset: 0;
+		fill: transparent;
+	}
+	100% {
+		stroke-dashoffset: 0;
+		fill: #fff;
+	}
+}
+
+main {
+	font-size: 12pt;
+	width: 70%;
+	padding: 2em;
+	margin-top: 1em;
+	background: rgba(92 46 0 / 0.2);
+	border: 1px solid #5c2e00;
+	border-radius: 1em;
+}
+h1 {
+	font-size: 1.5em;
+	text-align: center;
+}
+p {
+	margin-top: 1.15em;
+	font-family: verdana, sans-serif;
+	line-height: 1.3;
+}
+
+/*################### COLUMN GRID SYSTEM ###############*/
+
+.co-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+/*################# ICON STYLES ################*/
+
+div.disclaimer p {
+    text-align: center;
+    color: bisque;
+    font-size: 22px;
+}
+
+.social-icon ul {
+    position: absolute;
+    top: 59%;
+    left: 65%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+
+.social-icon ul li {
+    list-style: none;
+    margin: 0 15px;
+    font-size: 32px;
+}
+
+/*################ DEFAULT FOOTER STYES ################*/
+
+nav,
+header,
+footer {
+    display: block;
+    position: sticky;
+}
+
+nav,
+header {
+    display: block;
+    position: sticky;
+    top: 0;
+}
+
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    text-align: left;
+}
+
+.row::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+/*################ DEFAULT FOOTER STYES ################*/
+
+footer.footsy {
+    background: rgb(95, 55, 2);
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 0;
+}
+
+footer.footsy h1 {
+    color: #fff;
+    text-align: left;
+    font-size: 36px;
+    bottom: 0%;
+}
+
+footer.footsy ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 0%;
+    color: whitesmoke;
+}
+
+footer.footsy ul li {
+    color: whitesmoke;
+    font-size: 24px;
+}
+
+footer.footsy ul p {
+    color: whitesmoke;
+    font-size: 15px;
+}
+/* button */
+
+  
+  button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  button:hover span {
+    padding-right: 25px;
+  }
+  
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" 
+    integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <title>title</title>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="topnav" id="dropdownClick">
+                <li><a href="index.html"><img src="LODGE LOGO.png" style="height: 60px;" alt=""></a></li>
+                <li><a href="index.html"><button>Home</button></a></li>  
+                <li><a href="about.html"><button>About</button></a></li> 
+                <li><a href="faq.html"><button>FAQs</button></a></li> 
+                <li><a href="pricing.html"><button>Pricing</button></a></li>  
+                <li><a href="Branches.html"><button>Branches</button></a></li>
+                <li><a href="careers.html"><i class="bi bi-briefcase-fill"></i><button>Careers</button></a></li>
+
+<!------------------------ JAVA LOG/SIGN SECTION ------------------------> 
+
+                <li class="topnav-right"><a href="booking.html"> <button>Bookings</button> </a></li>
+                <li class="topnav-right"><a href="contact.html"> <button>Contact</button> </a></li>
+                <li class="dropdownIcon"><a href="javascript:void(0);" onclick="dropdownMenu()">&#x2630;</a></li>
+            </ul>
+        </nav>
+    </header>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='' rel='stylesheet'>
+    <style>body {
+background-image: linear-gradient(to right, #eae0ee, #faf7f8)url('https://i.imgur.com/8z1tx3u.jpg');;
+
+}
+
+.section {
+position: relative;
+height: 100vh;
+}
+
+.section .section-center {
+position: absolute;
+opacity: 0.8;
+top: 50%;
+left: 0;
+right: 0;
+-webkit-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+
+#booking {
+font-family: 'Raleway', sans-serif;
+}
+
+.booking-form {
+position: relative;
+max-width: 642px;
+width: 100%;
+margin: auto;
+padding: 40px;
+overflow: hidden;
+background-image: url('https://i.imgur.com/8z1tx3u.jpg');
+background-size: cover;
+border-radius: 5px;
+z-index: 20;
+}
+
+.booking-form::before {
+content: '';
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+background: rgba(0, 0, 0, 0.7);
+z-index: -1;
+}
+
+.booking-form .form-header {
+text-align: center;
+position: relative;
+margin-bottom: 30px;
+}
+
+.booking-form .form-header h1 {
+font-weight: 700;
+text-transform: capitalize;
+font-size: 42px;
+margin: 0px;
+color: #fff;
+}
+
+.booking-form .form-group {
+position: relative;
+margin-bottom: 30px;
+}
+
+.booking-form .form-control {
+background-color: rgba(255, 255, 255, 0.2);
+height: 60px;
+padding: 0px 25px;
+border: none;
+border-radius: 40px;
+color: #fff;
+-webkit-box-shadow: 0px 0px 0px 2px transparent;
+box-shadow: 0px 0px 0px 2px transparent;
+-webkit-transition: 0.2s;
+transition: 0.2s;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+color: rgba(255, 255, 255, 0.5);
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+color: rgba(255, 255, 255, 0.5);
+}
+
+.booking-form .form-control::placeholder {
+color: rgba(255, 255, 255, 0.5);
+}
+
+.booking-form .form-control:focus {
+-webkit-box-shadow: 0px 0px 0px 2px #ff8846;
+box-shadow: 0px 0px 0px 2px #ff8846;
+}
+
+.booking-form input[type="date"].form-control {
+padding-top: 16px;
+}
+
+.booking-form input[type="date"].form-control:invalid {
+color: rgba(255, 255, 255, 0.5);
+}
+
+.booking-form input[type="date"].form-control+.form-label {
+opacity: 1;
+top: 10px;
+}
+
+.booking-form select.form-control {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+
+.booking-form select.form-control:invalid {
+color: rgba(255, 255, 255, 0.5);
+}
+
+.booking-form select.form-control+.select-arrow {
+position: absolute;
+right: 15px;
+top: 50%;
+-webkit-transform: translateY(-50%);
+transform: translateY(-50%);
+width: 32px;
+line-height: 32px;
+height: 32px;
+text-align: center;
+pointer-events: none;
+color: rgba(255, 255, 255, 0.5);
+font-size: 14px;
+}
+
+.booking-form select.form-control+.select-arrow:after {
+content: '\279C';
+display: block;
+-webkit-transform: rotate(90deg);
+transform: rotate(90deg);
+}
+
+.booking-form select.form-control option {
+color: #000;
+}
+
+.booking-form .form-label {
+position: absolute;
+top: -10px;
+left: 25px;
+opacity: 0;
+color: #ff8846;
+font-size: 11px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1.3px;
+height: 15px;
+line-height: 15px;
+-webkit-transition: 0.2s all;
+transition: 0.2s all;
+}
+
+.booking-form .form-group.input-not-empty .form-control {
+padding-top: 16px;
+}
+
+.booking-form .form-group.input-not-empty .form-label {
+opacity: 1;
+top: 10px;
+}
+
+.booking-form .submit-btn {
+color: #fff;
+background-color: #e35e0a;
+font-weight: 700;
+height: 60px;
+padding: 10px 30px;
+width: 100%;
+border-radius: 40px;
+border: none;
+text-transform: uppercase;
+font-size: 16px;
+letter-spacing: 1.3px;
+-webkit-transition: 0.2s all;
+transition: 0.2s all;
+}
+
+.booking-form .submit-btn:hover,
+.booking-form .submit-btn:focus {
+opacity: 0.9;
+}</style>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js'></script>
+    <script type='text/javascript'></script> 
+<div id="booking" class="section">
+<div class="section-center">
+<div class="container">
+<div class="row">
+<div class="booking-form">
+<div class="form-header">
+<h1>Make your reservation</h1>
+</div>
+<form>
+<div class="form-group">
+<input class="form-control" type="text" placeholder="Country, ZIP, city...">
+<span class="form-label">Destination</span>
+</div>
+<div class="row">
+<div class="col-md-6">
+    <div class="form-group">
+        <input class="form-control" type="date" required>
+        <span class="form-label">Check In</span>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="form-group">
+        <input class="form-control" type="date" required>
+        <span class="form-label">Check out</span>
+    </div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+    <div class="form-group">
+        <select class="form-control" required>
+            <option value="" selected hidden>no of rooms</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+        <span class="select-arrow"></span>
+        <span class="form-label">Rooms</span>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="form-group">
+        <select class="form-control" required>
+            <option value="" selected hidden>no of adults</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+        <span class="select-arrow"></span>
+        <span class="form-label">Adults</span>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="form-group">
+        <select class="form-control" required>
+            <option value="" selected hidden>no of children</option>
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+        </select>
+        <span class="select-arrow"></span>
+        <span class="form-label">Children</span>
+    </div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+    <div class="form-group">
+        <input class="form-control" type="email" placeholder="Enter your Email">
+        <span class="form-label">Email</span>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="form-group">
+        <input class="form-control" type="tel" placeholder="Enter you Phone">
+        <span class="form-label">Phone</span>
+    </div>
+</div>
+</div>
+<div class="form-btn">
+<a href="done.html"><button class="submit-btn">Book Now</button></a>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div> 
+<!----------------------- YOUR CONTENT ABOVE ---------------------------->
+
+
+<!----------------------- FOOTER SECTION COL-1  ------------------------>
+
+
+<footer class="footsy">
+    <div class="row">
+        <div class="col-3 mobileStack"> 
+            <ul>
+                <h1>Company</h1>
+                <hr width="80%"> <br>
+              <a href="about.html"><li>About Us</li> <br></a> <br><br> 
+              <a href="privacy.html"><li>Privacy</li> <br></a> <br><br>
+              <a href="pricing.html"><li>Pricing</li> <br></a> 
+
+                
+            </ul>
+        </div>
+        
+  
+  <!----------------------- FOOTER SECTION COL-2  ------------------------>
+  
+        <div class="col-3 mobileStack">
+            <ul><h1>Contact</h1>
+                <hr width="80%"> <br>
+               <a href="contact.html"><li>Contact Us</li> </a> <br><br>
+               <a href="booking.html"><li>Booking</li> <br></a> <br><br>
+               <a href="faq.html"><li>FAQs</li> <br></a> <br><br>
+                </p>
+            </ul>
+        </div>
+  
+  <!----------------------- FOOTER SECTION COL-3  ------------------------>
+  
+        <div class="col-3 mobileStack">
+            <ul><h1>Quick Links</h1>
+                <hr width="80%"> <br>
+                <li>Wild Tour</li> <br>
+                <li>Frequently asked questions</li> <br> 
+                <li>Blog</li>
+                <p>
+                </p> <br>
+            </ul>
+        </div>
+  <!----------------------- FOOTER SECTION COL-4  ------------------------>
+  
+        <div class="col-3 mobileStack">
+            <ul>
+                <ul><h1>Office hours</h1>
+                    <hr width="80%"> <br>
+                    <li>About Us</li> <br>
+                    <p>Monday – Saturday: 8am – 5pm 
+                    </p> <br> <br> <br> 
+                </ul>
+            </ul>
+        </div>
+    </div>  <br> <hr width="95%"> <br> 
+  
+  </div> <br>
+  <div class="disclaimer">
+    <p>  The Wilderness Lodge  | Disclaimer | Powered by: Cool Code Clan </p>
+  </div> 
+    <div id="bodycontainer">
+        <div id="main">
+    <div class="social-icon">
+        <ul>
+            <li><a href="#" target="_blank"> <i class="fa-brands fa-facebook fa-bounce fa-2xl" style="color: #ffffff;"></i></a></li>
+            <li><a href="https://www.instagram.com/mothecreatoryds/" target="_blank"> <i class="fa-brands fa-square-instagram fa-bounce fa-2xl" style="color: #ffffff;"></i></a></li>
+            <li><a href="https://twitter.com/MoTheCreatorYDS" target="_blank"> <i class="fa-brands fa-square-twitter fa-bounce fa-2xl" style="color: #ffffff;"></i></a></li>
+        </ul>
+  </footer>
+
+<!------------------------ FONTS SCRIPT SECTION ------------------------>
+
+<script src="https://kit.fontawesome.com/8af7412c7c.js" crossorigin="anonymous"></script>
+
+<!-------------------------- JAVA SCRIPT SECTION ---------------------------->
+
+    <script>
+        function dropdownMenu () {
+            var x = document.getElementById("dropdownClick");
+            if (x.className === "topnav") {
+            x.className += " responsive";
+            /*change topnav to topnav.responsive*/
+            } else {
+                x.className = "topnav";
+            }
+        }
+</script>
+</body>
+</html>
